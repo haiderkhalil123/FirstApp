@@ -16,3 +16,58 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.content {
+    margin-top: 70px;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    background-color: seagreen;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    text-decoration: none;
+    color: #fff;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.navbar a {
+    position: relative;
+    font-size: 18px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    margin-left: 40px;
+    cursor:pointer;
+}
+
+    .navbar a::before {
+        content: '';
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: #fff;
+        transition: .3s;
+    }
+
+    .navbar a:hover::before {
+        width: 100%;
+    }
